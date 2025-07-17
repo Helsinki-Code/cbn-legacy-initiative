@@ -35,11 +35,11 @@ const Leadership = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {leaders.map((leader, index) => (
             <Card key={index} className="group overflow-hidden border-0 shadow-medium hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
-              <div className="relative h-80 overflow-hidden">
+              <div className="relative h-80 overflow-hidden bg-white">
                 <img
                   src={leader.image}
                   alt={leader.name}
-                  className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white">
                   <h4 className="text-lg font-bold mb-1">{leader.title}</h4>
