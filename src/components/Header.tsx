@@ -46,13 +46,13 @@ const Header = () => {
       {/* Main Navigation */}
       <nav className="bg-white shadow-soft border-b border-border">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
+          <div className="flex justify-between items-center py-6">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group">
               <img 
                 src={cbnLogo} 
                 alt="CBN Trust" 
-                className="h-16 md:h-20 w-auto transition-transform duration-300 group-hover:scale-105" 
+                className="h-20 md:h-24 lg:h-28 w-auto transition-transform duration-300 group-hover:scale-105 drop-shadow-lg" 
               />
             </Link>
 

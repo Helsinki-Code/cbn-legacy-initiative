@@ -34,7 +34,9 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* About Section */}
             <div className="space-y-4">
-              <img src={cbnLogo} alt="CBN Trust" className="h-16 w-auto" />
+              <div className="bg-white p-4 rounded-lg inline-block">
+                <img src={cbnLogo} alt="CBN Trust" className="h-20 md:h-24 w-auto" />
+              </div>
               <p className="text-gray-300 text-sm leading-relaxed">
                 Inspired by the visionary leadership of Chandrababu Naidu, CBN Trust is dedicated to bringing 
                 socio-economic change in Andhra Pradesh through education, healthcare, and community development.
