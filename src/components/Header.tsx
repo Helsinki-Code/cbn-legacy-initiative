@@ -48,8 +48,12 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3">
-              <img src={cbnLogo} alt="CBN Trust" className="h-14 w-auto" />
+            <Link to="/" className="flex items-center space-x-3 group">
+              <img 
+                src={cbnLogo} 
+                alt="CBN Trust" 
+                className="h-16 md:h-20 w-auto transition-transform duration-300 group-hover:scale-105" 
+              />
             </Link>
 
             {/* Desktop Navigation */}

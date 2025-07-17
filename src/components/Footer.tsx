@@ -2,7 +2,8 @@ import { Heart, Facebook, Twitter, Instagram, Youtube, Linkedin, Mail, Phone, Ma
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Link } from 'react-router-dom';
-import cbnLogo from '@/assets/cbn-logo.png';
+// Using the uploaded logo directly
+const cbnLogo = '/lovable-uploads/2c294f61-c101-4c9e-afe2-6071b03f2051.png';
 
 const Footer = () => {
   return (
@@ -33,13 +34,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* About Section */}
             <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <img src={cbnLogo} alt="CBN Trust" className="h-10 w-10" />
-                <div>
-                  <h3 className="text-lg font-bold">CBN TRUST</h3>
-                  <p className="text-xs text-gray-400">WE WORK THE TALK!</p>
-                </div>
-              </div>
+              <img src={cbnLogo} alt="CBN Trust" className="h-16 w-auto" />
               <p className="text-gray-300 text-sm leading-relaxed">
                 Inspired by the visionary leadership of Chandrababu Naidu, CBN Trust is dedicated to bringing 
                 socio-economic change in Andhra Pradesh through education, healthcare, and community development.
