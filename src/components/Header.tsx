@@ -48,11 +48,7 @@ const Header = () => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              <img src={cbnLogo} alt="CBN Trust" className="h-12 w-12" />
-              <div>
-                <h1 className="text-xl font-bold text-primary">CBN TRUST</h1>
-                <p className="text-xs text-muted-foreground">WE WORK THE TALK!</p>
-              </div>
+              <img src={cbnLogo} alt="CBN Trust" className="h-14 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
