@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import cbnLogo from '@/assets/cbn-logo.png';
+// Using the uploaded logo directly
+const cbnLogo = '/lovable-uploads/2c294f61-c101-4c9e-afe2-6071b03f2051.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
