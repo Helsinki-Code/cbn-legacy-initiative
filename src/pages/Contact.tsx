@@ -21,7 +21,7 @@ const Contact = () => {
       icon: Phone,
       title: "Call Us",
       details: [
-        "+91 9999999999",
+        "+91 9000777804",
         "+91 8888888888",
         "Toll Free: 1800-123-4567"
       ]
@@ -92,7 +92,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <label className="text-sm font-medium mb-2 block">Phone</label>
-                    <Input type="tel" placeholder="+91 9999999999" />
+                    <Input type="tel" placeholder="+91 9000777804" />
                   </div>
                   <div>
                     <label className="text-sm font-medium mb-2 block">Subject</label>
