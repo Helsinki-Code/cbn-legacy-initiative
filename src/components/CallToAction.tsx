@@ -1,6 +1,9 @@
 import { Heart, Users, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import sponsorEducationImage from '@/assets/sponsor-education-telugu.jpg';
+import sponsorHealthcareImage from '@/assets/sponsor-healthcare-telugu.jpg';
+import supportRuralImage from '@/assets/support-rural-telugu.jpg';
 
 const CallToAction = () => {
   const actions = [
@@ -10,7 +13,7 @@ const CallToAction = () => {
       description: "Help provide quality education and bright future for underprivileged children",
       buttonText: "Donate Now",
       variant: "secondary" as const,
-      image: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+      image: sponsorEducationImage
     },
     {
       icon: Heart,
@@ -18,7 +21,7 @@ const CallToAction = () => {
       description: "Support essential medical services and healthcare programs for rural areas",
       buttonText: "Contribute",
       variant: "hero" as const,
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+      image: sponsorHealthcareImage
     },
     {
       icon: Users,
@@ -26,7 +29,7 @@ const CallToAction = () => {
       description: "Help build sustainable livelihoods and infrastructure in rural communities",
       buttonText: "Get Involved",
       variant: "cta" as const,
-      image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+      image: supportRuralImage
     }
   ];
 

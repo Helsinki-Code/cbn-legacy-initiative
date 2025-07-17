@@ -1,6 +1,12 @@
 import { Heart, GraduationCap, Stethoscope, Home, Users, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import educationImage from '@/assets/education-support-telugu.jpg';
+import healthcareImage from '@/assets/healthcare-services-telugu.jpg';
+import ruralDevelopmentImage from '@/assets/rural-development-telugu.jpg';
+import disasterReliefImage from '@/assets/disaster-relief-telugu.jpg';
+import womenEmpowermentImage from '@/assets/women-empowerment-telugu.jpg';
+import digitalLiteracyImage from '@/assets/digital-literacy-telugu.jpg';
 
 const Programs = () => {
   const programs = [
@@ -8,7 +14,7 @@ const Programs = () => {
       icon: GraduationCap,
       title: "Education Support",
       description: "Providing quality education and scholarships to underprivileged children across Andhra Pradesh.",
-      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      image: educationImage,
       color: "text-blue-600",
       bgColor: "bg-blue-50"
     },
@@ -16,7 +22,7 @@ const Programs = () => {
       icon: Stethoscope,
       title: "Healthcare Services",
       description: "Delivering comprehensive healthcare solutions and medical support to rural communities.",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      image: healthcareImage,
       color: "text-red-600",
       bgColor: "bg-red-50"
     },
@@ -24,7 +30,7 @@ const Programs = () => {
       icon: Home,
       title: "Rural Development",
       description: "Empowering rural communities through infrastructure development and livelihood programs.",
-      image: "https://images.unsplash.com/photo-1500076656116-558758c991c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      image: ruralDevelopmentImage,
       color: "text-green-600",
       bgColor: "bg-green-50"
     },
@@ -32,7 +38,7 @@ const Programs = () => {
       icon: Heart,
       title: "Disaster Relief",
       description: "Rapid response and rehabilitation support during natural disasters and emergencies.",
-      image: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      image: disasterReliefImage,
       color: "text-purple-600",
       bgColor: "bg-purple-50"
     },
@@ -40,7 +46,7 @@ const Programs = () => {
       icon: Users,
       title: "Women Empowerment",
       description: "Skill development and entrepreneurship programs for women's economic independence.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      image: womenEmpowermentImage,
       color: "text-pink-600",
       bgColor: "bg-pink-50"
     },
@@ -48,7 +54,7 @@ const Programs = () => {
       icon: Zap,
       title: "Digital Literacy",
       description: "Technology training and digital skills development for the digital age.",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      image: digitalLiteracyImage,
       color: "text-indigo-600",
       bgColor: "bg-indigo-50"
     }

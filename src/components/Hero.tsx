@@ -1,6 +1,6 @@
 import { ArrowRight, Users, Heart, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroBanner from '@/assets/hero-banner.jpg';
+import heroBanner from '@/assets/hero-banner-telugu.jpg';
 
 const Hero = () => {
   const stats = [
