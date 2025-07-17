@@ -1,28 +1,21 @@
+
 import { Card, CardContent } from '@/components/ui/card';
-import cbnImage from '/lovable-uploads/237c037e-dce8-42a9-a02f-d2b38ad1352f.png';
 
 const Leadership = () => {
   const leaders = [
     {
-      name: "Chandrababu Naidu",
-      title: "The Inspiration",
+      name: "Sri Chandrababu Naidu",
+      title: "The CM of Andhra Pradesh",
       description: "Visionary leader and Chief Minister of Andhra Pradesh, driving transformation through technology and governance innovation.",
-      image: cbnImage,
+      image: "/lovable-uploads/9f06e8fe-ca12-4fb0-8134-fbbe84daabe9.png",
       gradient: "from-primary to-primary-hover"
     },
     {
-      name: "Leadership Team",
-      title: "The Force Behind",
-      description: "Dedicated professionals committed to implementing sustainable development programs across Andhra Pradesh.",
-      image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      name: "Sri Abhinetra",
+      title: "Founder Chairman of CBN Trust",
+      description: "Dedicated professional committed to implementing sustainable development programs across Andhra Pradesh and bringing positive change to communities.",
+      image: "/lovable-uploads/d3878ca3-8048-4f3c-937f-ef785bf864c5.png",
       gradient: "from-secondary to-secondary-hover"
-    },
-    {
-      name: "Community Champions",
-      title: "The Motivation",
-      description: "Local leaders and volunteers who work tirelessly to bring positive change to their communities.",
-      image: "https://images.unsplash.com/photo-1594213710582-d5dbe0d1ab32?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
-      gradient: "from-accent to-accent/80"
     }
   ];
 
@@ -39,17 +32,16 @@ const Leadership = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {leaders.map((leader, index) => (
             <Card key={index} className="group overflow-hidden border-0 shadow-medium hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-80 overflow-hidden">
                 <img
                   src={leader.image}
                   alt={leader.name}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className={`absolute inset-0 bg-gradient-to-t ${leader.gradient} opacity-80`}></div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white">
                   <h4 className="text-lg font-bold mb-1">{leader.title}</h4>
                 </div>
               </div>
