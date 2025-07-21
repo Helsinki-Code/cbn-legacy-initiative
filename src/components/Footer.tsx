@@ -1,4 +1,4 @@
-import { Heart, Facebook, Twitter, Instagram, Youtube, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Heart, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Link } from 'react-router-dom';
@@ -42,20 +42,11 @@ const Footer = () => {
                 socio-economic change in Andhra Pradesh through education, healthcare, and community development.
               </p>
               <div className="flex space-x-3">
-                <a href="#" className="text-gray-400 hover:text-secondary transition-colors">
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-secondary transition-colors">
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-secondary transition-colors">
+                <a href="https://www.instagram.com/cbn.trust/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-secondary transition-colors">
                   <Instagram className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-secondary transition-colors">
-                  <Youtube className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-secondary transition-colors">
-                  <Linkedin className="w-5 h-5" />
+                <a href="https://x.com/cbn_trust" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-secondary transition-colors">
+                  <Twitter className="w-5 h-5" />
                 </a>
               </div>
             </div>
