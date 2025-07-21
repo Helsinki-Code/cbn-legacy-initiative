@@ -1,5 +1,7 @@
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,6 +9,27 @@ import { Textarea } from '@/components/ui/textarea';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 const Contact = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact CBN Trust",
+    "description": "Contact CBN Trust to volunteer, donate, or partner with us. Join our mission to transform communities across Andhra Pradesh through sustainable development programs.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "CBN Trust",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "CBN Trust Office",
+        "addressLocality": "Amaravati",
+        "addressRegion": "Andhra Pradesh",
+        "postalCode": "522020",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91-9000777804",
+      "email": "info@cbntrust.org"
+    }
+  };
+
   const contactInfo = [
     {
       icon: MapPin,
@@ -48,6 +71,13 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Contact CBN Trust - Get Involved in Community Development"
+        description="Contact CBN Trust to volunteer, donate, or partner with us. Join our mission to transform communities across Andhra Pradesh through sustainable development programs."
+        ogImage="/assets/hero-banner-telugu.jpg"
+        canonical="https://cbntrust.org/contact"
+        structuredData={structuredData}
+      />
       <Header />
       
       {/* Hero Section */}

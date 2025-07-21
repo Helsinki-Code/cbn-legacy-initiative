@@ -1,10 +1,27 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
 
 const News = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "name": "CBN Trust Latest News",
+    "description": "Stay updated with CBN Trust's latest news, achievements, and impact stories from our programs across Andhra Pradesh. Read about our community transformation efforts.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CBN Trust",
+      "logo": "/lovable-uploads/2c294f61-c101-4c9e-afe2-6071b03f2051.png"
+    },
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "CBN Trust"
+    }
+  };
+
   const newsArticles = [
     {
       id: 1,
@@ -73,6 +90,13 @@ const News = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Latest News & Impact Stories | CBN Trust"
+        description="Stay updated with CBN Trust's latest news, achievements, and impact stories from our programs across Andhra Pradesh. Read about our community transformation efforts."
+        ogImage="/assets/healthcare-services-telugu.jpg"
+        canonical="https://cbntrust.org/news"
+        structuredData={structuredData}
+      />
       <Header />
       
       {/* Hero Section */}

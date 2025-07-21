@@ -1,10 +1,29 @@
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Users, Target, Eye, Award } from 'lucide-react';
 import cbnImage from '/lovable-uploads/237c037e-dce8-42a9-a02f-d2b38ad1352f.png';
 
 const About = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About CBN Trust",
+    "description": "Learn about CBN Trust's mission to transform Andhra Pradesh through innovative development programs. Discover our vision, values, and leadership commitment to community empowerment.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "CBN Trust",
+      "foundingDate": "2020",
+      "founder": {
+        "@type": "Person",
+        "name": "Chandrababu Naidu"
+      },
+      "mission": "To create sustainable social and economic transformation in Andhra Pradesh through innovative programs in education, healthcare, and community development."
+    }
+  };
+
   const values = [
     {
       icon: Target,
@@ -30,6 +49,13 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="About CBN Trust - Our Mission, Vision & Leadership | CBN Trust"
+        description="Learn about CBN Trust's mission to transform Andhra Pradesh through innovative development programs. Discover our vision, values, and leadership commitment to community empowerment."
+        ogImage="/lovable-uploads/237c037e-dce8-42a9-a02f-d2b38ad1352f.png"
+        canonical="https://cbntrust.org/about"
+        structuredData={structuredData}
+      />
       <Header />
       
       {/* Hero Section */}
@@ -71,7 +97,7 @@ const About = () => {
             <div className="relative">
               <img
                 src={cbnImage}
-                alt="Chandrababu Naidu"
+                alt="Chandrababu Naidu - Patron and Inspiration of CBN Trust"
                 className="w-full rounded-lg shadow-strong"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-lg"></div>

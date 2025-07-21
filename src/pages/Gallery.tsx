@@ -1,10 +1,28 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Eye, Download } from 'lucide-react';
 
 const Gallery = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "CBN Trust Photo Gallery",
+    "description": "View photos and videos from CBN Trust's impact programs across Andhra Pradesh. See our healthcare, education, and community development initiatives in action.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "CBN Trust",
+      "image": [
+        "/assets/healthcare-services-telugu.jpg",
+        "/assets/education-support-telugu.jpg",
+        "/assets/women-empowerment-telugu.jpg",
+        "/assets/rural-development-telugu.jpg"
+      ]
+    }
+  };
+
   const galleryImages = [
     {
       id: 1,
@@ -75,6 +93,13 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Photo Gallery - CBN Trust Programs in Action | CBN Trust"
+        description="View photos and videos from CBN Trust's impact programs across Andhra Pradesh. See our healthcare, education, and community development initiatives in action."
+        ogImage="/assets/healthcare-services-telugu.jpg"
+        canonical="https://cbntrust.org/gallery"
+        structuredData={structuredData}
+      />
       <Header />
       
       {/* Hero Section */}

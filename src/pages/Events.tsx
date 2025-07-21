@@ -1,10 +1,36 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, MapPin, Clock, Users, ArrowRight } from 'lucide-react';
 
 const Events = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "EventsPage",
+    "name": "CBN Trust Events",
+    "description": "Join CBN Trust's upcoming events, workshops, and community programs. From health camps to digital literacy workshops - be part of the transformation.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "CBN Trust",
+      "event": [
+        {
+          "@type": "Event",
+          "name": "CBN Trust Health Camp 2025",
+          "startDate": "2025-03-15T09:00:00",
+          "endDate": "2025-03-15T17:00:00",
+          "location": {
+            "@type": "Place",
+            "name": "Guntur District",
+            "address": "Guntur District, Andhra Pradesh, India"
+          },
+          "description": "Free health checkups and medical consultations for rural communities"
+        }
+      ]
+    }
+  };
+
   const upcomingEvents = [
     {
       title: "CBN Trust Health Camp 2025",
@@ -59,6 +85,13 @@ const Events = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Upcoming Events & Community Programs | CBN Trust"
+        description="Join CBN Trust's upcoming events, workshops, and community programs. From health camps to digital literacy workshops - be part of the transformation."
+        ogImage="/assets/healthcare-services-telugu.jpg"
+        canonical="https://cbntrust.org/events"
+        structuredData={structuredData}
+      />
       <Header />
       
       {/* Hero Section */}

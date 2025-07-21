@@ -1,16 +1,50 @@
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { GraduationCap, Stethoscope, Home, Heart, Users, Zap, ArrowRight } from 'lucide-react';
 
 const OurWork = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Our Impact Areas - CBN Trust Programs",
+    "description": "Explore CBN Trust's comprehensive development programs: education support, healthcare services, rural development, women empowerment, and digital innovation across Andhra Pradesh.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "CBN Trust",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "CBN Trust Programs",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Education & Skill Development",
+            "description": "Comprehensive education programs from primary to higher education, including vocational training and digital literacy."
+          },
+          {
+            "@type": "Offer",
+            "name": "Healthcare Services",
+            "description": "Mobile health clinics, specialty care programs, health awareness campaigns, and medical infrastructure development."
+          },
+          {
+            "@type": "Offer",
+            "name": "Rural Development",
+            "description": "Infrastructure development, livelihood programs, agricultural support, and sustainable development initiatives."
+          }
+        ]
+      }
+    }
+  };
+
   const programs = [
     {
       icon: GraduationCap,
       title: "Education & Skill Development",
       description: "Comprehensive education programs from primary to higher education, including vocational training and digital literacy.",
-      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      image: "/assets/education-support-telugu.jpg",
       achievements: ["50,000+ Students Supported", "200+ Schools Enhanced", "1,000+ Scholarships Provided"],
       color: "bg-blue-500"
     },
@@ -18,7 +52,7 @@ const OurWork = () => {
       icon: Stethoscope,
       title: "Healthcare Services",
       description: "Mobile health clinics, specialty care programs, health awareness campaigns, and medical infrastructure development.",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      image: "/assets/healthcare-services-telugu.jpg",
       achievements: ["100,000+ Patients Treated", "50+ Health Camps", "25+ Mobile Clinics"],
       color: "bg-red-500"
     },
@@ -26,7 +60,7 @@ const OurWork = () => {
       icon: Home,
       title: "Rural Development",
       description: "Infrastructure development, livelihood programs, agricultural support, and sustainable development initiatives.",
-      image: "https://images.unsplash.com/photo-1500076656116-558758c991c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      image: "/assets/rural-development-telugu.jpg",
       achievements: ["500+ Villages Developed", "10,000+ Livelihoods Created", "300+ Infrastructure Projects"],
       color: "bg-green-500"
     },
@@ -34,7 +68,7 @@ const OurWork = () => {
       icon: Heart,
       title: "Disaster Response & Relief",
       description: "Emergency response, rehabilitation support, disaster preparedness training, and community resilience building.",
-      image: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      image: "/assets/disaster-relief-telugu.jpg",
       achievements: ["15+ Disaster Responses", "75,000+ People Assisted", "500+ Families Rehabilitated"],
       color: "bg-purple-500"
     },
@@ -42,7 +76,7 @@ const OurWork = () => {
       icon: Users,
       title: "Women Empowerment",
       description: "Skill development, entrepreneurship support, self-help groups, and leadership development for women.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      image: "/assets/women-empowerment-telugu.jpg",
       achievements: ["25,000+ Women Empowered", "1,500+ SHGs Formed", "5,000+ Entrepreneurs Created"],
       color: "bg-pink-500"
     },
@@ -50,7 +84,7 @@ const OurWork = () => {
       icon: Zap,
       title: "Digital Innovation",
       description: "Technology adoption, digital literacy programs, e-governance initiatives, and innovation hubs.",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      image: "/assets/digital-literacy-telugu.jpg",
       achievements: ["100+ Digital Centers", "30,000+ People Trained", "50+ Tech Solutions"],
       color: "bg-indigo-500"
     }
@@ -58,6 +92,13 @@ const OurWork = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Our Impact Areas - Education, Healthcare & Rural Development | CBN Trust"
+        description="Explore CBN Trust's comprehensive development programs: education support, healthcare services, rural development, women empowerment, and digital innovation across Andhra Pradesh."
+        ogImage="/assets/education-support-telugu.jpg"
+        canonical="https://cbntrust.org/our-work"
+        structuredData={structuredData}
+      />
       <Header />
       
       {/* Hero Section */}
@@ -89,7 +130,7 @@ const OurWork = () => {
                   <div className="relative overflow-hidden rounded-lg shadow-strong">
                     <img
                       src={program.image}
-                      alt={program.title}
+                      alt={`${program.title} - CBN Trust Program`}
                       className="w-full h-64 lg:h-80 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
