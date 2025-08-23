@@ -3,7 +3,7 @@ import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 // Using the uploaded logo directly
-const cbnLogo = '/lovable-uploads/09fcf303-b09b-4128-bf93-b6f7ea49ebcb.png';
+const cbnLogo = '/lovable-uploads/629fd9b8-0e43-414e-95cd-8c3ec6294b1c.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -13,7 +13,7 @@ const Index = () => {
     "@type": "Organization",
     "name": "CBN Trust",
     "url": "https://cbntrust.org",
-    "logo": "/lovable-uploads/09fcf303-b09b-4128-bf93-b6f7ea49ebcb.png",
+    "logo": "/lovable-uploads/629fd9b8-0e43-414e-95cd-8c3ec6294b1c.png",
     "description": "Join CBN Trust in creating sustainable social and economic transformation through education, healthcare, rural development, and community empowerment programs across Andhra Pradesh.",
     "address": {
       "@type": "PostalAddress",
