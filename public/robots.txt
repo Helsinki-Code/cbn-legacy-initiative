@@ -2,7 +2,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cbntrust.org/sitemap.xml
+Sitemap: https://gmdkpupaogjslpyhhloz.supabase.co/functions/v1/sitemap
 
 # Block access to admin areas (if any)
 Disallow: /admin/

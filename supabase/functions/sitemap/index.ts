@@ -1,8 +1,17 @@
-import { useEffect } from 'react';
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
 
-const Sitemap = () => {
-  useEffect(() => {
-    // Set proper headers for XML response
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+}
+
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req.method === 'OPTIONS') {
+    return new Response('ok', { headers: corsHeaders })
+  }
+
+  try {
     const sitemapXML = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -47,15 +56,22 @@ const Sitemap = () => {
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-</urlset>`;
+</urlset>`
 
-    // Replace page content with XML
-    document.open();
-    document.write(sitemapXML);
-    document.close();
-  }, []);
-
-  return null;
-};
-
-export default Sitemap;
+    return new Response(sitemapXML, {
+      headers: {
+        ...corsHeaders,
+        'Content-Type': 'application/xml; charset=utf-8',
+        'Cache-Control': 'public, max-age=86400', // Cache for 24 hours
+      },
+    })
+  } catch (error) {
+    return new Response(
+      JSON.stringify({ error: error.message }),
+      {
+        status: 500,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      }
+    )
+  }
+})
